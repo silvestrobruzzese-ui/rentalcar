@@ -1,0 +1,178 @@
+/* AutoRent App Styles */
+
+.page-container {
+    min-height: 100vh;
+}
+
+.dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 260px;
+    flex-shrink: 0;
+}
+
+.main-content {
+    flex: 1;
+    overflow-x: hidden;
+}
+
+/* Status badges */
+.status-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.status-available {
+    @apply bg-emerald-100 text-emerald-800;
+}
+
+.status-rented {
+    @apply bg-blue-100 text-blue-800;
+}
+
+.status-maintenance {
+    @apply bg-amber-100 text-amber-800;
+}
+
+.status-pending {
+    @apply bg-yellow-100 text-yellow-800;
+}
+
+.status-confirmed {
+    @apply bg-blue-100 text-blue-800;
+}
+
+.status-active {
+    @apply bg-emerald-100 text-emerald-800;
+}
+
+.status-completed {
+    @apply bg-slate-100 text-slate-800;
+}
+
+.status-cancelled {
+    @apply bg-red-100 text-red-800;
+}
+
+/* Category badges */
+.category-economy {
+    @apply bg-green-100 text-green-800;
+}
+
+.category-compact {
+    @apply bg-blue-100 text-blue-800;
+}
+
+.category-suv {
+    @apply bg-orange-100 text-orange-800;
+}
+
+.category-luxury {
+    @apply bg-purple-100 text-purple-800;
+}
+
+/* Table styles */
+.data-table {
+    @apply w-full;
+}
+
+.data-table th {
+    @apply text-left text-xs font-semibold text-slate-500 uppercase tracking-wider py-3 px-4 bg-slate-50 border-b;
+}
+
+.data-table td {
+    @apply py-4 px-4 border-b border-slate-100;
+}
+
+.data-table tr:hover td {
+    @apply bg-slate-50;
+}
+
+/* Card styles */
+.stat-card {
+    @apply bg-white rounded-xl border border-slate-200 p-6 transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md;
+}
+
+.stat-card-icon {
+    @apply w-12 h-12 rounded-xl flex items-center justify-center;
+}
+
+/* Form styles */
+.form-group {
+    @apply space-y-2;
+}
+
+.form-label {
+    @apply text-sm font-medium text-slate-700;
+}
+
+.form-input {
+    @apply w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors;
+}
+
+.form-select {
+    @apply w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors bg-white;
+}
+
+/* Hero section */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.7));
+}
+
+/* Navigation active state */
+.nav-item {
+    @apply flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 font-medium transition-colors duration-200;
+}
+
+.nav-item:hover {
+    @apply bg-slate-100 text-slate-900;
+}
+
+.nav-item.active {
+    @apply bg-blue-50 text-blue-600;
+}
+
+/* Calendar styles override */
+.rdp {
+    --rdp-accent-color: #2563EB;
+    --rdp-background-color: #EFF6FF;
+}
+
+/* Loading spinner */
+.spinner {
+    @apply w-6 h-6 border-2 border-blue-600 border-t-transparent rounded-full animate-spin;
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+    @apply fixed inset-0 bg-black/50 backdrop-blur-sm z-50;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .sidebar {
+        @apply fixed inset-y-0 left-0 z-40 transform -translate-x-full transition-transform duration-300;
+    }
+    .sidebar.open {
+        @apply translate-x-0;
+    }
+}
+
+@media (max-width: 640px) {
+    .stat-card {
+        @apply p-4;
+    }
+    .data-table th,
+    .data-table td {
+        @apply px-2 py-2 text-sm;
+    }
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Completed contract editing functionality testing - Backend fully functional, Frontend has session management issues",
+  "backend_issues": {
+    "critical_bugs": [],
+    "flaky_endpoints": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [
+      {
+        "component": "Authentication/Session Management",
+        "issue": "Frequent session timeouts preventing consistent access to contract pages",
+        "selector": "Login page redirects",
+        "fix_priority": "HIGH"
+      },
+      {
+        "component": "Contract Navigation",
+        "issue": "Direct navigation to contract edit page inconsistent due to session issues",
+        "affected_selectors": ["/admin/contratto/{id}"],
+        "fix_priority": "MEDIUM"
+      }
+    ],
+    "integration_issues": [
+      {
+        "flow": "Contract editing workflow",
+        "issue": "Cannot consistently test edit mode due to session management problems",
+        "affected_selectors": ["text=Modifica Contratto", "edit buttons"]
+      }
+    ],
+    "design_issues": []
+  },
+  "passed_tests": [
+    "Backend: Admin login API (/api/auth/login)",
+    "Backend: Get booking API (/api/prenotazioni/{id})",
+    "Backend: Admin update contract API (/api/prenotazioni/{id}/admin-update)",
+    "Backend: DATI RIENTRO fields update and persistence",
+    "Backend: ADDEBITI AL RIENTRO fields update and auto-calculation",
+    "Backend: FRANCHIGIE inclusion/exclusion functionality",
+    "Backend: Contract calculations with franchigie exclusions",
+    "Frontend: Initial login functionality",
+    "Frontend: Admin dashboard access"
+  ],
+  "test_report_links": ["/app/backend_test.py"],
+  "success_percentage": {
+    "backend": "100% - All contract editing APIs working perfectly",
+    "frontend": "30% - Login works but session management prevents full testing"
+  },
+  "updated_files": ["/app/backend_test.py"],
+  "action_item_for_main_agent": "Fix frontend session management issues - sessions are expiring too quickly preventing consistent access to contract editing pages. The backend contract editing functionality is fully working (all V-BIS DATI RIENTRO, ADDEBITI AL RIENTRO, and COPERTURE ASSICURATIVE features are implemented and tested). Focus on improving session persistence and authentication token management in the frontend.",
+  "should_call_test_agent_after_fix": "true",
+  "should_main_agent_test_itself": "false"
+}

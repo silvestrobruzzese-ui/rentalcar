@@ -1,0 +1,136 @@
+{
+  "theme": "light_and_dark",
+  "typography": {
+    "heading_font": "Outfit",
+    "body_font": "Manrope",
+    "rules": {
+      "headings": "Use tracking-tight for all headings. Never use Inter for headings.",
+      "body": "Use leading-relaxed for body text.",
+      "labels": "Uppercase, tiny text with wide spacing (tracking-[0.2em])."
+    }
+  },
+  "colors": {
+    "primary": {
+      "DEFAULT": "#2563EB",
+      "hover": "#1D4ED8",
+      "foreground": "#FFFFFF"
+    },
+    "background": {
+      "light": "#F8FAFC",
+      "dark": "#0F172A"
+    },
+    "surface": {
+      "light": "#FFFFFF",
+      "dark": "#1E293B"
+    },
+    "text": {
+      "light_mode_primary": "#0F172A",
+      "light_mode_secondary": "#64748B",
+      "dark_mode_primary": "#F8FAFC",
+      "dark_mode_secondary": "#94A3B8"
+    },
+    "accents": {
+      "success": "#10B981",
+      "warning": "#F59E0B",
+      "danger": "#EF4444"
+    }
+  },
+  "layouts": {
+    "marketing": {
+      "grid": "grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12",
+      "spacing": "Use p-8 to p-24 for sections. Generous breathing room."
+    },
+    "dashboard": {
+      "grid": "grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6",
+      "spacing": "Use p-6 for cards. Dense, functional spacing."
+    }
+  },
+  "components": {
+    "cards": "Subtle border (border-border), flat solid background, rounded-xl. Hover state: slight lift (-translate-y-1) and shadow-lg.",
+    "buttons": "Pill-shaped (rounded-full) or smooth rounded (rounded-lg) for dashboard. Primary buttons must use the blue brand color with white text. Apply smooth transition for background color and transform.",
+    "inputs": "Shadcn default styles, customized with brand focus ring (focus:ring-blue-500).",
+    "header": "Crystal Glass effect: bg-white/70, backdrop-blur-xl, border-b border-white/20, shadow-sm."
+  },
+  "visual_enhancers": {
+    "shadows": "Ambient + direct shadows for floating elements.",
+    "glassmorphism": "Used for sticky headers and modal overlays (backdrop-blur-xl).",
+    "borders": "1px solid borders using border-slate-200 (light) or border-slate-800 (dark)."
+  },
+  "motion": {
+    "hover_states": "All interactive elements must have hover states. E.g. hover:bg-slate-100 or scale-105 for images.",
+    "transitions": "Use specific transitions like 'transition-colors', 'transition-transform' with 'duration-200 ease-out'. NO 'transition-all'."
+  },
+  "accessibility": {
+    "contrast": "Ensure minimum 4.5:1 contrast ratio for normal text. Use text shadow over images.",
+    "focus": "High contrast focus states for all form inputs and buttons.",
+    "aria": "Add data-testid to all interactive elements."
+  },
+  "image_urls": {
+    "hero_backgrounds": [
+      {
+        "url": "https://images.unsplash.com/photo-1738748140408-61b8965748b8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjBjYXIlMjBkcml2aW5nJTIwc3Vuc2V0fGVufDB8fHx8MTc3NDQ0NzM5NXww&ixlib=rb-4.1.0&q=85",
+        "category": "hero",
+        "description": "A luxury car driving down a road at sunset. Use for the main public landing page hero section."
+      }
+    ],
+    "fleet_cars": [
+      {
+        "url": "https://images.unsplash.com/photo-1762195340046-415140d8b1b2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwxfHx3aGl0ZSUyMG1vZGVybiUyMGNhciUyMHN0dWRpb3xlbnwwfHx8fDE3NzQ0NDczOTZ8MA&ixlib=rb-4.1.0&q=85",
+        "category": "fleet",
+        "description": "White Porsche SUV parked inside a modern showroom. Use as thumbnail for fleet management and booking car selection."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1676288176820-a5a954d81e6e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwzfHx3aGl0ZSUyMG1vZGVybiUyMGNhciUyMHN0dWRpb3xlbnwwfHx8fDE3NzQ0NDczOTZ8MA&ixlib=rb-4.1.0&q=85",
+        "category": "fleet",
+        "description": "A white car parked in a showroom. Use as thumbnail for fleet management and booking car selection."
+      }
+    ],
+    "services_features": [
+      {
+        "url": "https://images.pexels.com/photos/7144209/pexels-photo-7144209.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "features",
+        "description": "Joyful couple holding keys in a dealership showroom. Use for the 'Seamless Handover' or 'Customer Trust' section on the landing page."
+      },
+      {
+        "url": "https://images.pexels.com/photos/235063/pexels-photo-235063.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "features",
+        "description": "Detailed view of a modern car dashboard. Use for the 'Premium Fleet' or 'Quality Assured' features section."
+      }
+    ]
+  },
+  "libraries_and_tools": {
+    "icons": "@phosphor-icons/react",
+    "toast": "sonner",
+    "charts": "recharts",
+    "date_picker": "shadcn calendar"
+  },
+  "instructions_to_main_agent": [
+    "Use Outfit for all headings and Manrope for body text.",
+    "Ensure dark/light mode toggle exists as users may prefer different themes for SaaS.",
+    "Build the dashboard using high density grids (grid-cols-4) with no unnecessary full-screen gradients.",
+    "Use Shadcn components for forms, tables, modals, and date pickers. Heavily customize them to fit the blue theme.",
+    "Implement the landing page with pure HTML+Tailwind for layout to allow asymmetrical, dynamic designs.",
+    "Add data-testid attributes to all interactive elements.",
+    "Use Phosphor icons for a modern, crisp look in the dashboard.",
+    "Apply 'Crystal Glass' effect (backdrop-blur-xl + high opacity bg + thin border) to sticky headers.",
+    "Do NOT use complete transparent background in header, overlays, any surface that has content under it.",
+    "Create separate .js files for UI components, not .tsx.",
+    "Create the specific functionalities exactly as the user specified: Fleet CRUD, Bookings Calendar, Contract Management with PDF, etc."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic outputs. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition (transition: all). Always add transitions for specific properties excluding transforms.",
+    "You MUST NOT center align the app container (.App { text-align: center; } is forbidden).",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style.",
+    "NEVER use AI assistant Emoji characters for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Prioritize using pre-existing components from src/components/ui. Create new components that match their style.",
+    "Components MUST use named exports, Pages MUST use default exports."
+  ],
+  "general_ui_ux_guidelines": "Ensure a clean, reliable, and trustworthy interface suitable for car rental businesses. High contrast text, explicit hover states, no pure black/white without slight tinting. Focus on clear typography and structured bento-grids for data."
+}
