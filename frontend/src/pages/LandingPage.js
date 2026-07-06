@@ -20,9 +20,10 @@ export default function LandingPage() {
     const fetchVehicles = async () => {
       try {
         const data = await api.get('/vehicles/available');
-        setVehicles(data);
+        setVehicles(Array.isArray(data) ? data : []);
       } catch (error) {
         console.error('Error:', error);
+        setVehicles([]);
       } finally {
         setLoading(false);
       }
