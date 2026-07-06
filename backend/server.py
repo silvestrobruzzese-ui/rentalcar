@@ -33,25 +33,25 @@ JWT_SECRET = os.environ.get('JWT_SECRET', 'autorent-secret-key-2026')
 JWT_ALGORITHM = "HS256"
 JWT_EXPIRATION_HOURS = 24
 
-# Agency Fixed Data
+# Agency Fixed Data - Configure in admin settings
 AGENCY_DATA = {
-    "ragione_sociale": "RE.LE.CO. GROUP",
-    "indirizzo": "Corso Umberto, 220",
-    "cap": "88068",
-    "comune": "Soverato",
-    "provincia": "CZ",
-    "regione": "Calabria",
-    "piva": "03406230791",
-    "cf": "03406230791",
-    "telefono": "3342370420",
+    "ragione_sociale": "Rental Car",
+    "indirizzo": "",
+    "cap": "",
+    "comune": "",
+    "provincia": "",
+    "regione": "",
+    "piva": "",
+    "cf": "",
+    "telefono": "",
     "email": "giannibruzzese@gmail.com",
     "sede_checkin": {
         "nome": "Sede Principale",
-        "regione": "Calabria",
-        "provincia": "CZ",
-        "comune": "Soverato",
-        "cap": "88068",
-        "indirizzo": "Via Giordano Bruno"
+        "regione": "",
+        "provincia": "",
+        "comune": "",
+        "cap": "",
+        "indirizzo": ""
     }
 }
 
@@ -67,14 +67,13 @@ def build_return_reminder_html(prenotazione: dict) -> str:
     <html>
     <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
         <div style="background: linear-gradient(135deg, #1e40af, #3b82f6); color: white; padding: 25px; text-align: center; border-radius: 12px 12px 0 0;">
-            <h1 style="margin: 0; font-size: 24px;">SOVERATO RENTAL</h1>
-            <p style="margin: 5px 0 0 0; font-size: 13px; opacity: 0.9;">RE.LE.CO. GROUP S.R.L.</p>
+            <h1 style="margin: 0; font-size: 24px;">RENTAL CAR</h1>
         </div>
         <div style="background: #fff3cd; border: 1px solid #ffc107; padding: 20px; border-radius: 0 0 12px 12px;">
             <h2 style="color: #856404; margin-top: 0;">Promemoria Riconsegna Veicolo</h2>
             <p style="color: #664d03;">Gentile <strong>{prenotazione.get('cliente_nome', 'Cliente')}</strong>,</p>
             <p style="color: #664d03;">Le ricordiamo che la riconsegna del veicolo noleggiato e' prevista tra circa <strong>5 ore</strong>.</p>
-            
+
             <div style="background: white; border-radius: 8px; padding: 15px; margin: 15px 0; border: 1px solid #e0e0e0;">
                 <table style="width: 100%; font-size: 14px; color: #333;">
                     <tr><td style="padding: 5px 0; color: #666;">Veicolo:</td><td style="padding: 5px 0;"><strong>{prenotazione.get('veicolo_marca', '')} {prenotazione.get('veicolo_modello', '')}</strong></td></tr>
@@ -83,7 +82,7 @@ def build_return_reminder_html(prenotazione: dict) -> str:
                     <tr><td style="padding: 5px 0; color: #666;">Luogo:</td><td style="padding: 5px 0;"><strong>{prenotazione.get('luogo_riconsegna', 'Sede Principale')}</strong></td></tr>
                 </table>
             </div>
-            
+
             <div style="background: #f8f9fa; border-radius: 8px; padding: 12px; margin: 15px 0; font-size: 13px; color: #555;">
                 <strong>Cosa portare:</strong>
                 <ul style="margin: 5px 0; padding-left: 20px;">
@@ -92,13 +91,8 @@ def build_return_reminder_html(prenotazione: dict) -> str:
                     <li>Veicolo con stesso livello carburante del ritiro</li>
                 </ul>
             </div>
-            
-            <p style="color: #664d03; font-size: 13px;">In caso di ritardo, si prega di contattarci al <strong>334 237 0420</strong>.</p>
-        </div>
-        <div style="text-align: center; padding: 15px; font-size: 11px; color: #999;">
-            <p>Soverato Rental - RE.LE.CO. GROUP S.R.L.</p>
-            <p>Corso Umberto, 220 - 88068 Soverato (CZ)</p>
-            <p>Tel: 334 237 0420 | Email: giannibruzzese@gmail.com</p>
+
+            <p style="color: #664d03; font-size: 13px;">In caso di ritardo, si prega di contattarci.</p>
         </div>
     </body>
     </html>
@@ -111,8 +105,7 @@ async def send_booking_confirmation_email(cliente_email: str, cliente_nome: str,
     <html>
     <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
         <div style="background-color: #1e40af; color: white; padding: 20px; text-align: center;">
-            <h1 style="margin: 0;">RE.LE.CO. GROUP</h1>
-            <p style="margin: 5px 0 0 0; font-size: 14px;">Autonoleggio</p>
+            <h1 style="margin: 0;">RENTAL CAR</h1>
         </div>
         
         <div style="padding: 20px; background-color: #f8fafc;">
@@ -185,7 +178,7 @@ async def send_booking_confirmation_email(cliente_email: str, cliente_nome: str,
             <p>Per qualsiasi informazione, non esiti a contattarci.</p>
             
             <p>Cordiali saluti,<br>
-            <strong>RE.LE.CO. GROUP</strong></p>
+            <strong>Rental Car</strong></p>
         </div>
         
         <div style="background-color: #1e3a5f; color: white; padding: 15px; text-align: center; font-size: 12px;">
@@ -293,7 +286,7 @@ async def start_reminder_task():
 # ========== WEEKLY CALENDAR EXCEL EMAIL (Every Sunday at 18:00) ==========
 
 async def weekly_calendar_email():
-    """Send weekly calendar Excel to soverato.rental@libero.it every Sunday at 18:00 (Italy)"""
+    """Send weekly calendar Excel every Sunday at 18:00 (Italy) - disabled"""
     import openpyxl
     from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
     from io import BytesIO
@@ -811,7 +804,7 @@ async def get_condizioni_generali():
     settings = await db.settings.find_one({"type": "condizioni_generali"}, {"_id": 0})
     if not settings:
         # Default conditions
-        default_text = """1. DEFINIZIONI: Per "Locatore" si intende RE.LE.CO. GROUP. Per "Locatario" si intende il cliente che sottoscrive il presente contratto.
+        default_text = """1. DEFINIZIONI: Per "Locatore" si intende l'agenzia di noleggio. Per "Locatario" si intende il cliente che sottoscrive il presente contratto.
 
 2. CONSEGNA DEL VEICOLO: Il Locatario dichiara di aver ricevuto il veicolo in perfetto stato di manutenzione e funzionamento.
 
@@ -860,19 +853,19 @@ async def get_agenzia_settings():
     """Get agency settings"""
     settings = await db.settings.find_one({"type": "agenzia"}, {"_id": 0})
     if not settings:
-        # Default values
+        # Default values - configure in admin panel
         return {
-            "ragione_sociale": "Soverato Rental",
-            "slogan": "Il noleggio che conviene",
-            "indirizzo": "Corso Umberto, 220",
-            "cap": "88068",
-            "comune": "Soverato",
-            "provincia": "CZ",
-            "regione": "Calabria",
-            "piva": "03406230791",
-            "cf": "03406230791",
-            "telefono": "3342370420",
-            "email": "soveratorental@libero.it",
+            "ragione_sociale": "Rental Car",
+            "slogan": "",
+            "indirizzo": "",
+            "cap": "",
+            "comune": "",
+            "provincia": "",
+            "regione": "",
+            "piva": "",
+            "cf": "",
+            "telefono": "",
+            "email": "giannibruzzese@gmail.com",
             "logo_url": "/images/logo_agenzia.png"
         }
     # Remove internal fields
@@ -1880,9 +1873,9 @@ async def admin_create_prenotazione(data: dict, admin: dict = Depends(get_admin_
         "ora_riconsegna": data.get("ora_riconsegna", "18:00"),
         "durata_giorni": durata,
         "luogo_ritiro": "Sede",
-        "indirizzo_ritiro": "Corso Umberto, 220 - Soverato (CZ)",
+        "indirizzo_ritiro": "",
         "luogo_riconsegna": "Sede",
-        "indirizzo_riconsegna": "Corso Umberto, 220 - Soverato (CZ)",
+        "indirizzo_riconsegna": "",
         "tariffa_giornaliera": tariffa_giornaliera,
         "tariffa_stagionale": tariffa_stagionale_info,
         "tariffa_base": tariffa_base,
@@ -3241,7 +3234,7 @@ async def seed_data():
         ]
         await db.vehicles.insert_many(vehicles)
     
-    # Default franchigie (specifiche RE.LE.CO. GROUP)
+    # Default franchigie
     franch_count = await db.franchigie.count_documents({})
     if franch_count == 0:
         franchigie = [

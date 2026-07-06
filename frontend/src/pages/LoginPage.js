@@ -36,11 +36,7 @@ export default function LoginPage() {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <Link to="/" className="inline-flex flex-col items-center gap-2">
-            <img 
-              src="/soverato-rental-logo.png" 
-              alt="Soverato Rental" 
-              className="h-24 w-auto"
-            />
+            <span className="text-3xl font-bold text-blue-600">RENTAL CAR</span>
           </Link>
         </div>
         

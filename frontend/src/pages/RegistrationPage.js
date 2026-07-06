@@ -207,7 +207,7 @@ export default function RegistrationPage() {
             <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center">
               <Car className="w-6 h-6 text-white" />
             </div>
-            <span style={{ fontFamily: 'Outfit, sans-serif' }}>RE.LE.CO. GROUP</span>
+            <span style={{ fontFamily: 'Outfit, sans-serif' }}>RENTAL CAR</span>
           </Link>
           <h1 className="text-2xl font-bold text-slate-900" style={{ fontFamily: 'Outfit, sans-serif' }}>
             Registrazione Cliente

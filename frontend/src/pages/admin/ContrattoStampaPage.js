@@ -69,17 +69,17 @@ export default function ContrattoStampaPage() {
   const [serviziDisponibili, setServiziDisponibili] = useState([]);
   const contractRef = useRef(null);
   
-  // Dati agenzia FISSI per il contratto (come da richiesta)
+  // Dati agenzia - configurare in impostazioni
   const AGENCY = {
-    nome: "SOVERATO RENTAL by RE.LE.CO GROUP",
-    indirizzo: "Via Giordano Bruno 81",
-    cap: "88068",
-    comune: "Soverato",
-    provincia: "CZ",
-    regione: "CALABRIA",
-    piva: "03406230791",
-    cf: "03406230791",
-    telefono: "3342370420",
+    nome: "RENTAL CAR",
+    indirizzo: "",
+    cap: "",
+    comune: "",
+    provincia: "",
+    regione: "",
+    piva: "",
+    cf: "",
+    telefono: "",
     email: "giannibruzzese@gmail.com"
   };
 
@@ -598,7 +598,7 @@ export default function ContrattoStampaPage() {
                     P.iva {AGENCY.piva}  CF {AGENCY.cf}
                   </p>
                   <p className="text-xs text-gray-600">
-                    Tel. {AGENCY.telefono}  Email:{AGENCY.email} - Soverato.rental@libero.it
+                    Tel. {AGENCY.telefono}  Email: {AGENCY.email}
                   </p>
                 </div>
               </div>
@@ -676,7 +676,7 @@ export default function ContrattoStampaPage() {
                   <p><span className="text-gray-600">Indirizzo:</span> {AGENCY.indirizzo} - {AGENCY.cap} {AGENCY.comune} ({AGENCY.provincia})</p>
                   <p><span className="text-gray-600">P.IVA:</span> {AGENCY.piva}</p>
                   <p><span className="text-gray-600">Contatti:</span> Tel. {AGENCY.telefono}</p>
-                  <p><span className="text-gray-600">Email:</span> {AGENCY.email} - soverato.rental@libero.it</p>
+                  <p><span className="text-gray-600">Email:</span> {AGENCY.email}</p>
                 </div>
               </div>
               {/* Locatario */}
@@ -1482,7 +1482,7 @@ export default function ContrattoStampaPage() {
             <div className="p-1.5 text-xs">
               <p className="leading-relaxed">Il sottoscritto locatario dichiara di aver letto attentamente e di accettare integralmente le condizioni generali di noleggio riportate nel presente contratto, nonche' ogni clausola ivi contenuta.</p>
               <div className="mt-3 flex justify-between">
-                <div><span className="text-gray-600">Luogo e data: </span>{p.luogo_ritiro || 'Soverato'}, {formatDateIT(p.data_ritiro)}</div>
+                <div><span className="text-gray-600">Luogo e data: </span>{p.luogo_ritiro || ''}, {formatDateIT(p.data_ritiro)}</div>
               </div>
             </div>
           </div>
@@ -1500,7 +1500,7 @@ export default function ContrattoStampaPage() {
               VIII. CONDIZIONI GENERALI DI NOLEGGIO
             </div>
             <div className="p-2 leading-snug" style={{ fontSize: '6pt', lineHeight: '1.25' }}>
-              <p className="mb-0.5"><strong>1.</strong> La società RE.LE.CO. Group SRL in seguito definita Locatrice, concede in noleggio alla persona che sottoscrive il presente contratto, in nome proprio ovvero in qualità di legale rappresentate della società indicata, in seguito definita Conduttore, il veicolo descritto nel contratto stesso.</p>
+              <p className="mb-0.5"><strong>1.</strong> L'agenzia di noleggio in seguito definita Locatrice, concede in noleggio alla persona che sottoscrive il presente contratto, in nome proprio ovvero in qualità di legale rappresentate della società indicata, in seguito definita Conduttore, il veicolo descritto nel contratto stesso.</p>
               
               <p className="mb-0.5"><strong>2.</strong> Il Conduttore dichiara che il veicolo, al momento della presa in consegna, si trova in buone condizioni di meccanica e di carrozzeria. Pertanto si obbliga a riconsegnarlo nello stesso stato in cui l'ha ricevuto, salvo il normale deterioramento dovuto all'uso, segnalando per iscritto alla Locatrice gli eventuali danni o anomalie.</p>
               

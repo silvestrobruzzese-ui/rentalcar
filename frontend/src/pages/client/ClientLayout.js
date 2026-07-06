@@ -46,13 +46,8 @@ export const ClientSidebar = ({ isOpen, onClose }) => {
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between h-16 px-4 border-b border-slate-200">
             <Link to="/" className="flex items-center gap-2">
-              <img
-                src="/soverato-rental-logo.png"
-                alt="Soverato Rental"
-                className="w-10 h-10 rounded-lg object-contain"
-              />
-              <span className="text-sm font-bold text-slate-900" style={{ fontFamily: 'Outfit, sans-serif' }}>
-                Soverato Rental
+              <span className="text-sm font-bold text-blue-600" style={{ fontFamily: 'Outfit, sans-serif' }}>
+                RENTAL CAR
               </span>
             </Link>
             <button className="lg:hidden p-1 text-slate-400 hover:text-slate-600" onClick={onClose}>
@@ -563,7 +558,7 @@ export function ClientPrenotazioniPage() {
                     className="w-full h-10 px-3 border rounded-md"
                     value={editingPrenotazione.luogo_riconsegna || ''}
                     onChange={(e) => setEditingPrenotazione({...editingPrenotazione, luogo_riconsegna: e.target.value})}
-                    placeholder="Es: Sede Soverato"
+                    placeholder="Es: Sede Principale"
                   />
                 </div>
               </div>

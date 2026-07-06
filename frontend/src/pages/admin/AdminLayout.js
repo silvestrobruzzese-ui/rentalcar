@@ -44,16 +44,11 @@ export const AdminSidebar = ({ isOpen, onClose }) => {
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between h-16 px-4 border-b border-slate-200">
             <Link to="/" className="flex items-center gap-2">
-              <img 
-                src="/soverato-rental-logo.png" 
-                alt="Soverato Rental" 
-                className="h-10 w-auto"
-              />
               <div>
-                <span className="text-sm font-bold text-slate-900" style={{ fontFamily: 'Outfit, sans-serif' }}>
-                  Soverato Rental
+                <span className="text-sm font-bold text-blue-600" style={{ fontFamily: 'Outfit, sans-serif' }}>
+                  RENTAL CAR
                 </span>
-                <p className="text-[9px] text-slate-500 -mt-0.5">Gestionale Noleggio</p>
+                <p className="text-[9px] text-slate-500 -mt-0.5">Gestionale</p>
               </div>
             </Link>
             <button className="lg:hidden p-1 text-slate-400 hover:text-slate-600" onClick={onClose}>

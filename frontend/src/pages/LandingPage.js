@@ -44,16 +44,10 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <Link to="/" className="flex items-center gap-3" data-testid="logo-link">
-              <img 
-                src="/soverato-rental-logo.png" 
-                alt="Soverato Rental" 
-                className="h-12 w-auto"
-              />
               <div>
-                <span className="text-lg font-bold text-slate-900" style={{ fontFamily: 'Outfit, sans-serif' }}>
-                  Soverato Rental
+                <span className="text-xl font-bold text-blue-600" style={{ fontFamily: 'Outfit, sans-serif' }}>
+                  RENTAL CAR
                 </span>
-                <p className="text-[10px] text-slate-500 -mt-1">Il noleggio che conviene</p>
               </div>
             </Link>
             
@@ -157,16 +151,10 @@ export default function LandingPage() {
             
             {/* Agency Info - Clickable contacts */}
             <div className="mt-12 flex flex-wrap gap-6 text-sm text-slate-300">
-              <a 
-                href="https://www.google.com/maps/search/?api=1&query=Corso+Umberto+220+88068+Soverato+CZ+Italia"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-white transition-colors"
-                data-testid="hero-address"
-              >
+              <span className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-blue-400" />
-                <span className="underline">Soverato (CZ), Calabria</span>
-              </a>
+                <span>Italia</span>
+              </span>
               <a 
                 href="tel:+393342370420"
                 className="flex items-center gap-2 hover:text-white transition-colors"
@@ -315,18 +303,14 @@ export default function LandingPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-white">
-            <a 
-              href="https://www.google.com/maps/search/?api=1&query=Corso+Umberto+220+88068+Soverato+CZ+Italia"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white/10 rounded-xl p-6 hover:bg-white/20 transition-colors cursor-pointer"
+            <div
+              className="bg-white/10 rounded-xl p-6"
               data-testid="contact-address"
             >
               <MapPin className="w-8 h-8 mx-auto mb-3" />
               <h4 className="font-semibold mb-1">Indirizzo</h4>
-              <p className="text-sm text-blue-100">Corso Umberto, 220<br />88068 Soverato (CZ)</p>
-              <p className="text-xs text-blue-200 mt-2 underline">Apri in Google Maps →</p>
-            </a>
+              <p className="text-sm text-blue-100">Italia</p>
+            </div>
             <a 
               href="tel:+393342370420"
               className="bg-white/10 rounded-xl p-6 hover:bg-white/20 transition-colors cursor-pointer"
@@ -355,15 +339,9 @@ export default function LandingPage() {
       <footer className="bg-slate-900 text-slate-400 py-8">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <img 
-              src="/soverato-rental-logo.png" 
-              alt="Soverato Rental" 
-              className="h-10 w-auto"
-            />
-            <span className="text-lg font-bold text-white" style={{ fontFamily: 'Outfit, sans-serif' }}>Soverato Rental</span>
+            <span className="text-xl font-bold text-white" style={{ fontFamily: 'Outfit, sans-serif' }}>RENTAL CAR</span>
           </div>
-          <p className="text-sm">P.IVA: 03406230791 • CF: 03406230791</p>
-          <p className="text-sm mt-2">© 2026 RE.LE.CO. GROUP S.R.L. Tutti i diritti riservati.</p>
+          <p className="text-sm mt-2">© 2026 Rental Car. Tutti i diritti riservati.</p>
         </div>
       </footer>
     </div>

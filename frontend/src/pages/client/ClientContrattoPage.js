@@ -61,15 +61,15 @@ export default function ClientContrattoPage() {
   const cliente = user;
 
   const AGENCY = {
-    nome: "RE.LE.CO. GROUP",
-    indirizzo: "CORSO UMBERTO, 220",
-    cap: "88068",
-    comune: "SOVERATO",
-    provincia: "CZ",
-    regione: "CALABRIA",
-    piva: "03406230791",
-    cf: "03406230791",
-    telefono: "3342370420",
+    nome: "RENTAL CAR",
+    indirizzo: "",
+    cap: "",
+    comune: "",
+    provincia: "",
+    regione: "",
+    piva: "",
+    cf: "",
+    telefono: "",
     email: "giannibruzzese@gmail.com"
   };
 
@@ -473,7 +473,7 @@ export default function ClientContrattoPage() {
               IX. CONDIZIONI GENERALI DI NOLEGGIO
             </div>
             <div className="p-3 text-xs leading-relaxed" style={{ fontSize: '8pt', lineHeight: '1.4' }}>
-              <p className="mb-2"><strong>1.</strong> La società RE.LE.CO. Group SRL in seguito definita Locatrice, concede in noleggio alla persona che sottoscrive il presente contratto, in nome proprio ovvero in qualità di legale rappresentate della società indicata, in seguito definita Conduttore, il veicolo descritto nel contratto stesso.</p>
+              <p className="mb-2"><strong>1.</strong> L'agenzia di noleggio in seguito definita Locatrice, concede in noleggio alla persona che sottoscrive il presente contratto, in nome proprio ovvero in qualità di legale rappresentate della società indicata, in seguito definita Conduttore, il veicolo descritto nel contratto stesso.</p>
               
               <p className="mb-2"><strong>2.</strong> Il Conduttore dichiara che il veicolo, al momento della presa in consegna, si trova in buone condizioni di meccanica e di carrozzeria. Pertanto si obbliga a riconsegnarlo nello stesso stato in cui l'ha ricevuto, salvo il normale deterioramento dovuto all'uso, segnalando per iscritto alla Locatrice gli eventuali danni o anomalie.</p>
               

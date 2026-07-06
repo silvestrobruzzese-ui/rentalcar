@@ -21,17 +21,17 @@ export default function AdminImpostazioniPage() {
   
   // Agenzia
   const [agenzia, setAgenzia] = useState({
-    ragione_sociale: 'Soverato Rental',
-    slogan: 'Il noleggio che conviene',
-    indirizzo: 'Corso Umberto, 220',
-    cap: '88068',
-    comune: 'Soverato',
-    provincia: 'CZ',
-    regione: 'Calabria',
-    piva: '03406230791',
-    cf: '03406230791',
-    telefono: '3342370420',
-    email: 'soveratorental@libero.it',
+    ragione_sociale: 'Rental Car',
+    slogan: '',
+    indirizzo: '',
+    cap: '',
+    comune: '',
+    provincia: '',
+    regione: '',
+    piva: '',
+    cf: '',
+    telefono: '',
+    email: 'giannibruzzese@gmail.com',
     logo_url: '/images/logo_agenzia.png'
   });
   
@@ -362,7 +362,7 @@ export default function AdminImpostazioniPage() {
                   <Input 
                     value={agenzia.ragione_sociale} 
                     onChange={e => setAgenzia({...agenzia, ragione_sociale: e.target.value})}
-                    placeholder="Soverato Rental"
+                    placeholder="Rental Car"
                   />
                 </div>
                 <div className="space-y-2">
